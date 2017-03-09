@@ -56,7 +56,8 @@ totalIP = end - start
 totalNumber = 10
 # total number of threads
 totalThread = totalIP/totalNumber
-totalThread += 1
+if totalIP%totalNumber != 0:
+	totalThread += 1
 # list of threads
 threads = []
 
