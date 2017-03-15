@@ -1,6 +1,5 @@
-import os
 import collections
-import platform
+import os
 import socket, subprocess,sys
 import threading
 from datetime import datetime
@@ -16,17 +15,7 @@ end = int(raw_input("Enter the last host address: "))
 end = end + 1
 myDict = collections.OrderedDict()
 
-# operating system of the platform
-opSys = platform.system()
-
-# choosing ping command according to operating system
-# to make the program platform independent
-if opSys == "Windows":
-	ping = "ping -n 1 "
-elif opSys == "Linux":
-	ping = "ping -c 1 "
-else:
-	ping = "ping -c 1 "
+ping = "ping -c 1 "
 
 t1 = datetime.now()
 
