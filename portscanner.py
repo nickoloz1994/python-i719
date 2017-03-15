@@ -1,22 +1,12 @@
 import threading
 import time
 import socket
-import subprocess
 import sys
-import platform
 from datetime import datetime
 import thread
 
-opSys = platform.system()
-
 # list for active ports
 ports = []
-
-# clear command line
-if opSys == "Windows":
-	subprocess.call('cls', shell = True)
-else:
-	subprocess.call('clear', shell = True)
 
 # thread class
 class myThread(threading.Thread):
